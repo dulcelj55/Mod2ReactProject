@@ -1,0 +1,8 @@
+#navbar-container{
+    height:60px;
+    background: lightblue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}

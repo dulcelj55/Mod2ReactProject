@@ -1,0 +1,7 @@
+#header-container{
+    height:60px;
+    background: lightgray;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

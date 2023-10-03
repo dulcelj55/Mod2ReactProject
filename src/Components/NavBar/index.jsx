@@ -6,7 +6,7 @@ const Navbar = () => {
 <>
     <nav id="navbar-container">
      <Link to= "/ReactFacts">React Facts</Link>
-    <Link to="/Game"><button>Game</button></Link>
+    <Link to="/Game">Game</Link>
     <Link to="/CodeExamples">Code Examples</Link>
     <Link to="/Login">Login</Link>
 

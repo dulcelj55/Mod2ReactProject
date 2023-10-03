@@ -1,6 +1,13 @@
 import React from 'react'
 
 const CodeExamples = () => {
+    return(
+
+        <>
+
+        code examples
+        </>
+    )
 //   const [inputValue, setInputValue] = useState('')
 //   const [newInputValue, setNewInputValue] = useState('')
 

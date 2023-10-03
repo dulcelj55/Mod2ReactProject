@@ -12,9 +12,9 @@ const Basics = () => {
 
   return (
     <div>
-      <div>Hello World! In the JSX portion of a component function, you can type just like you would type in HTML.</div>
+      
       <div>
-        <p> This is an example of changing a className that determines the background color.</p>
+
         <button onClick={() => setColor("blue")}>Blue</button>
         <button onClick={() => setColor("red")}>Red</button>
         <button onClick={() => setColor("green")}>Green</button>

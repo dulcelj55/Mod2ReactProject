@@ -33,6 +33,9 @@ import MultipleChoice from './Pages/MultipleChoice'
 import PropsC from './Pages/PropsC'
 import ImageCarousel from './Pages/ImageCarousel'
 import Arrays from './Pages/Arrays'
+import Toggle from './Pages/Toggle'
+import HelloWorld from './Pages/HelloWorld'
+import ChangeColor from './Pages/ChangeColor'
 
 function App() {
  
@@ -46,6 +49,8 @@ function App() {
       <Routes >
         <Route path="/" element={<Home/>}/>
         <Route path="/basics" element={<Basics/>}/>
+        <Route path="/helloworld" element={<HelloWorld/>}/>
+        <Route path="/changecolor" element={<ChangeColor/>}/>
         <Route path="/codeexamples" element={<CodeExamples/>}/>
         <Route path="/examples" element={<Examples/>}/>
         <Route path="/game" element={<Game/>}/>

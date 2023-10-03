@@ -11,12 +11,12 @@ const SideBar = () => {
    
     <br/>
     <Link to="/Hooks">Hooks</Link>
-    <Link to="/PagesP"><button>How to make Pages</button></Link>
-    <Link to="/Props"><button>Props</button></Link>
-    <Link to="/ReactFacts"><button>ReactFacts</button></Link>
-    <Link to="/StartUp"><button>Create a Project</button></Link>
-    <Link to="/State"><button>What is State?</button></Link>
-    <Link to="/URL_Params"><button>URL and Params</button></Link>
+    <Link to="/PagesP">How to make Pages</Link>
+    <Link to="/Props">Props</Link>
+    <Link to="/ReactFacts">ReactFacts</Link>
+    <Link to="/StartUp">Create a Project</Link>
+    <Link to="/State">What is State?</Link>
+    <Link to="/URL_Params">URL and Params</Link>
    
 
     </section>

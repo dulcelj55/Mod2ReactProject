@@ -20,15 +20,21 @@ import Examples from './Pages/Examples'
 import Hooks from './Pages/Hooks'
 import PagesP from './Pages/PagesP'
 import Props from './Pages/Props'
+import UseSelector from './Pages/UseSelector'
+import UseDispatch from './Pages/UseDispatch'
+import ComponentsP from './Pages/ComponentsP'
+import HandleClick from './Pages/HandleClick'
 
 function App() {
  
 
   return (
+   
     <div className='app'>
-    <Header/>
-      <Navbar/>
-      <Routes>
+    <Header id="header-container"/>
+      <Navbar id="nav-container"/>
+      <SideBar id="sidebar-container"/>
+      <Routes >
         <Route path="/" element={<Home/>}/>
         <Route path="/basics" element={<Basics/>}/>
         <Route path="/codeexamples" element={<CodeExamples/>}/>
@@ -45,13 +51,19 @@ function App() {
         <Route path="/usestate" element={<UseState/>}/>
         <Route path="/usecontext" element={<UseContext/>}/>
         <Route path="/useeffect" element={<UseEffect/>}/>
+        <Route path="/useselector" element={<UseSelector/>}/>
+        <Route path="/usedispatch" element={<UseDispatch/>}/>
+        <Route path="/componentsp" element={<ComponentsP/>}/>
+        <Route path="/handleclick" element={<HandleClick/>}/>
+
+
 
         
 
       </Routes>
-      <SideBar/>
-      <Home/>
-      <Footer/>
+      
+    
+      <Footer id="footer-container"/>
     </div>
   )
 }

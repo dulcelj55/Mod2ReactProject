@@ -2,11 +2,14 @@
 // loging in a program/ user
 // creating state at the global level
 
-import React from 'react'
+import {Link} from 'react-router-dom'
 
 const UseContext= () => {
   return (
+    <>
     <div>UseContext page</div>
+    <Link to="/Hooks"><button>Back</button></Link>
+    </>
   )
 }
 

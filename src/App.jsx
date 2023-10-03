@@ -24,6 +24,15 @@ import UseSelector from './Pages/UseSelector'
 import UseDispatch from './Pages/UseDispatch'
 import ComponentsP from './Pages/ComponentsP'
 import HandleClick from './Pages/HandleClick'
+import Counter from './Pages/Counter'
+import RandomVariable from './Pages/RandomVariable'
+import InputForm from './Pages/InputForm'
+import NewsTicker from './Pages/NewsTicker'
+import RateReview from './Pages/RateReview'
+import MultipleChoice from './Pages/MultipleChoice'
+import PropsC from './Pages/PropsC'
+import ImageCarousel from './Pages/ImageCarousel'
+import Arrays from './Pages/Arrays'
 
 function App() {
  
@@ -54,7 +63,22 @@ function App() {
         <Route path="/useselector" element={<UseSelector/>}/>
         <Route path="/usedispatch" element={<UseDispatch/>}/>
         <Route path="/componentsp" element={<ComponentsP/>}/>
-        <Route path="/handleclick" element={<HandleClick/>}/>
+        <Route path="/handleclick" element={<HandleClick/>}/>  
+        <Route path="/counter" element={<Counter/>}/>
+        <Route path="/randomvariable" element={<RandomVariable/>}/>
+        <Route path="/inputform" element={<InputForm/>}/>
+        <Route path="/newsticker" element={<NewsTicker/>}/>
+        <Route path="/toggle" element={<Toggle/>}/>
+        <Route path="/ratereview" element={<RateReview/>}/>
+        <Route path="/multiplechoice" element={<MultipleChoice/>}/>
+        <Route path="/newsticker" element={<NewsTicker/>}/>
+        <Route path="/randomvariable" element={<RandomVariable/>}/>
+        <Route path="/propsc" element={<PropsC/>}/>
+        <Route path="/imagecarousel" element={<ImageCarousel/>}/>
+        <Route path="/arrays" element={<Arrays/>}/>
+
+        
+
 
 
 

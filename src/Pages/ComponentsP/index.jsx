@@ -14,8 +14,25 @@ const ComponentsP = () => {
    
    <Link to="/ChangeColor"><button>Change Background Color</button></Link>
    
-   <Link to="/HandleClick"><button>Event Listeners</button></Link>
-   handleClick
+   <Link to="/handleClick"><button>Event Listeners</button></Link>
+   <Link to="/counter"><button>Counter</button></Link>
+   <Link to="/randomvariable"><button>Random variable</button></Link>
+   <Link to="/inputform"><button>Input Form</button></Link>
+   <Link to="/toggle"><button>Toggle</button></Link>
+   <Link to="/newsticker"><button>News Ticker</button></Link>
+   <Link to="/ratereview"><button>Rate / Review</button></Link>
+   <Link to="/imagecarosal"><button>Image Carousel</button></Link>
+   <Link to="/quizcard"><button>Multiple Choice </button></Link>
+   <Link to="/arrays"><button>Arrays</button></Link>
+   <Link to="/localstorge"><button>Local Storage</button></Link>
+   <Link to="/propsc"><button>Props </button></Link>
+   <Link to="/api"><button>APIs</button></Link>
+   <Link to="/trafficlight"><button>Traffic Light</button></Link>
+   <Link to="/Emjois"><button>Emjois</button></Link>
+  
+
+
+   
    make a counter morning lab
    random name/ color morning lab
    input form 

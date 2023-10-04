@@ -1,4 +1,5 @@
 import "./index.css";
+import { Link } from "react-router-dom";
 
 const HelloWorld = () => {
   let code = `
@@ -9,10 +10,11 @@ const HelloWorld = () => {
       )
   };
   
-  export default HelloWorld;`;
+  export default HelloWorld`
 
   return (
     <div className="scroll">
+      <Link to="/ComponentsP"><button>BACK TO COMPONENTS</button></Link>
       <h1 className="title">Hello World!</h1>
       <h4>
         This is an example of adding text inside the return statement. This is exactly like typing into HTML. You can use element tags like h1, p, or div tags. 

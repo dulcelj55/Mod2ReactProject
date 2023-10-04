@@ -1,5 +1,6 @@
 import "./index.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ChangeColor = () => {
   const[color, setColor]= useState("grey")
@@ -31,6 +32,7 @@ export default ChangeColor
 
   return (
     <div className="scroll">
+      <Link to="/ComponentsP"><button>BACK TO COMPONENTS</button></Link>
       <h1 className="title">Change Classes</h1>
       <h4>
         In many programs we want to change the color of items. This is an example of changing a className that determines the background color.

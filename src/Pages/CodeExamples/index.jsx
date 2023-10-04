@@ -1,13 +1,18 @@
-import React from 'react'
+import "./index.css";
 
 const CodeExamples = () => {
-    return(
+  let code = `
+      code goes inside here`;
 
-        <>
+  return (
+    <p>
+   tic tac Toe 
+   movie API
+   </p>
+  );
+};
 
-        code examples
-        </>
-    )
+export default CodeExamples;
 //   const [inputValue, setInputValue] = useState('')
 //   const [newInputValue, setNewInputValue] = useState('')
 
@@ -36,6 +41,3 @@ const CodeExamples = () => {
 
 //     </>
 //   )
-}
-
-export default CodeExamples

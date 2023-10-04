@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
+import './index.css'
 
 const ComponentsP = () => {
   return (
     <div id="components">
-      <h1>Components</h1>
-      <div>
-        Components are simlair to JavaSrcipt functions. They are reusable pieces
-        of code that return HTML to the application. Component folders are
-        nested in the Source folder or "src". They are written in Pascal and are
-        self closing when used. Writen as fucntions they have several parts to
-        them. Import section is on the top of the function. The area between the
+      <h1 className="h1">Components</h1>
+      <div className="text">
+        Components are simlair to JavaScript functions. They are reusable pieces
+        of code that will return a HTML element form to the application. Component folders are
+        nested in the Source folder (src). They are written in Pascal form and are
+        self closing. Writen as fucntions, they have several parts to
+        them. Import section is on the top of the function, where you import libraries you're using as well as hooks. The area between the
         start of the function and the return section are where you would place
         your state items. Components always rerender once state has been
         changed/updated This area also contains function handles in the return
@@ -22,7 +23,9 @@ const ComponentsP = () => {
         when property linked. One shortcut when creating a component is using
         "rface" it stands for React Function
       </div>
-      <div id="buttongrid">Click on these buttons to see different types of Components:
+      <div className="title" id="buttongrid">Click on these buttons to see different types of Components:
+      <br/>
+      <div className="buttons">
       <Link to="/helloworld">
         <button>Hello World!</button>
       </Link>
@@ -30,7 +33,7 @@ const ComponentsP = () => {
         <button>Event Listeners</button>
       </Link>
       <Link to="/ChangeColor">
-        <button>Change Background Color</button>
+        <button>Change Classes</button>
       </Link>
       
       <Link to="/counter">
@@ -51,7 +54,7 @@ const ComponentsP = () => {
       <Link to="/ratereview">
         <button>Rate / Review</button>
       </Link>
-      <Link to="/imagecarosal">
+      <Link to="/imagecarousel">
         <button>Image Carousel</button>
       </Link>
       <Link to="/quizcard">
@@ -75,6 +78,7 @@ const ComponentsP = () => {
       <Link to="/Emjois">
         <button>Emjois</button>
       </Link>
+      </div>
       </div>
     </div>
   );

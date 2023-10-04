@@ -1,0 +1,22 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+.lesson{
+    background-color: bisque;
+    padding: 20px;
+    border-radius: 15%;
+
+}
+.scroll{
+    overflow: scroll;
+}
+.title{
+    text-align: center;
+}
+.code{
+    padding:10px;
+    border-radius: 15%;
+    background-color: aquamarine;
+}

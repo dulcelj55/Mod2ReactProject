@@ -1,5 +1,6 @@
 import "./index.css";
 import { useState } from "react";
+import {Link} from "react-router-dom"
 
 const HandleClick = () => {
   const [buttonColor, setBackgroundColor] = useState("red");
@@ -40,6 +41,7 @@ const HandleClick = () => {
 
   return (
     <div className="scroll">
+      <Link to="/ComponentsP"><button>BACK TO COMPONENTS</button></Link>
       <h1 className="title">Event Listeners</h1>
       <h4 className="info">
         In React the DOM changes state. That's why we have to "state" our

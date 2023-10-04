@@ -36,6 +36,7 @@ import Arrays from './Pages/Arrays'
 import Toggle from './Pages/Toggle'
 import HelloWorld from './Pages/HelloWorld'
 import ChangeColor from './Pages/ChangeColor'
+import TrafficLight from './Pages/TrafficLight'
 
 function App() {
  
@@ -81,6 +82,7 @@ function App() {
         <Route path="/propsc" element={<PropsC/>}/>
         <Route path="/imagecarousel" element={<ImageCarousel/>}/>
         <Route path="/arrays" element={<Arrays/>}/>
+        <Route path="/trafficlight" element={<TrafficLight/>}/>
 
         
 

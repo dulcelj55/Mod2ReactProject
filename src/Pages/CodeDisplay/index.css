@@ -1,17 +1,7 @@
-.red{
-    background-color: red;
-}
-.blue{
-    background-color: blue;
-}
-.green{
-    background-color: green;
-}
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100%;
-   
 }
 .lesson{
     background-color: bisque;
@@ -29,10 +19,4 @@
     padding:10px;
     border-radius: 15%;
     background-color: aquamarine;
-}
-#border{
-    border-style: solid;
-}
-.fontsize{
-    font-size: xx-large;
 }

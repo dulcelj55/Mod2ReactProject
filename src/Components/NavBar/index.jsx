@@ -1,14 +1,14 @@
 import {Link} from 'react-router-dom'
 import './index.css'
 
-const Navbar = () => {
+const Navbar = ({userName, setIsSubmitted}) => {
   return (
 <>
     <nav id="navbar-container">
-     <Link to= "/ReactFacts">React Facts</Link>
+     <Link to= "/ReactFacts">What is React?</Link>
     <Link to="/Game">Game</Link>
     <Link to="/CodeExamples">Code Examples</Link>
-    <Link to="/Login">Login</Link>
+    setIsSubmitted ? "Logged in as {userName} : <Link to="/Login">Login</Link>
 
     
     

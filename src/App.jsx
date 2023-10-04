@@ -25,7 +25,7 @@ import UseDispatch from './Pages/UseDispatch'
 import ComponentsP from './Pages/ComponentsP'
 import HandleClick from './Pages/HandleClick'
 import Counter from './Pages/Counter'
-import RandomVariable from './Pages/RandomVariable'
+
 import InputForm from './Pages/InputForm'
 import NewsTicker from './Pages/NewsTicker'
 import RateReview from './Pages/RateReview'
@@ -37,6 +37,8 @@ import Toggle from './Pages/Toggle'
 import HelloWorld from './Pages/HelloWorld'
 import ChangeColor from './Pages/ChangeColor'
 import TrafficLight from './Pages/TrafficLight'
+import CodeDisplay from './Pages/CodeDisplay'
+import List from './Pages/List'
 
 function App() {
  
@@ -57,7 +59,7 @@ function App() {
         <Route path="/game" element={<Game/>}/>
         <Route path="/hooks" element={<Hooks/>}/>
         <Route path="/login" element={<Login/>}/>
-        <Route path="/papesp" element={<PagesP/>}/>
+        <Route path="/pagesp" element={<PagesP/>}/>
         <Route path="/props" element={<Props/>}/>
         <Route path="/reactfacts" element={<ReactFacts/>}/>
         <Route path="/startup" element={<StartUp/>}/>
@@ -71,18 +73,34 @@ function App() {
         <Route path="/componentsp" element={<ComponentsP/>}/>
         <Route path="/handleclick" element={<HandleClick/>}/>  
         <Route path="/counter" element={<Counter/>}/>
-        <Route path="/randomvariable" element={<RandomVariable/>}/>
+        <Route path="/randomvariable" element={<List/>}/>
         <Route path="/inputform" element={<InputForm/>}/>
         <Route path="/newsticker" element={<NewsTicker/>}/>
         <Route path="/toggle" element={<Toggle/>}/>
         <Route path="/ratereview" element={<RateReview/>}/>
         <Route path="/multiplechoice" element={<MultipleChoice/>}/>
         <Route path="/newsticker" element={<NewsTicker/>}/>
-        <Route path="/randomvariable" element={<RandomVariable/>}/>
         <Route path="/propsc" element={<PropsC/>}/>
         <Route path="/imagecarousel" element={<ImageCarousel/>}/>
         <Route path="/arrays" element={<Arrays/>}/>
         <Route path="/trafficlight" element={<TrafficLight/>}/>
+        <Route path="/test" element={ 
+          <CodeDisplay 
+          title="Hello World"
+          discription="This is an example of adding text inside the return statement. This is exactly like typing into HTML. You can use element tags like h1, p, or div tags. "
+          output={  <h1>Hello World!</h1>}
+          code={`
+          const HelloWorld = () =>{                                                              
+          return ( 
+             <h1>Hello World!</h1>
+             
+              )
+          };
+          
+          export default HelloWorld`}
+          />
+          }/>
+
 
         
 

@@ -1,6 +1,7 @@
 import "./index.css";
 import {useState} from 'react'
 import { Link } from "react-router-dom";
+import { CopyBlock, dracula } from "react-code-blocks";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -54,7 +55,14 @@ const Counter = () => {
 
         <div className="code">
           <p className="title">Code:</p>
-          <code>{code}</code>
+          <CopyBlock
+          language={"jsx"}
+          text={code}
+          showLineNumbers={true}
+          theme={dracula}
+          wrapLines={true}
+          codeBlock
+        />
         </div>
       </div>
     </div>

@@ -6,22 +6,9 @@ const Basics = () => {
 
   return (
     <div>
-    inline style: <div style={{display:flex, backgroundColor: "blue"}}>This Example</div>
-     
-
-      <button className={color}>The current Color is {color}</button>
-
-    
-  <p></p>    
-Example of Input tied to State:
-<p></p>
-      <input
-        value={name}
-        placeholder="Name"
-        onChange={(e) => handleChange(e)}
-      ></input>
+   hello
 {/* //         package.json is what holds our dependencies "tools we use"
-//         we need to install these...  node package manager
+//         
 //         package-lock.json has the right versions of the tools we are using
 // src folder is where everything is/ home
 // app css is for the app folder

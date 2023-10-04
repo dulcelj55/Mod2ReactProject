@@ -1,4 +1,5 @@
 import "./index.css";
+import { CopyBlock, dracula } from "react-code-blocks";
 
 const MultipleChoice = () => {
  
@@ -20,7 +21,14 @@ const MultipleChoice = () => {
   
           <div className="code">
             <p className="title">Code:</p>
-            <code>{code}</code>
+            <CopyBlock
+          language={"jsx"}
+          text={code}
+          showLineNumbers={true}
+          theme={dracula}
+          wrapLines={true}
+          codeBlock
+        />
           </div>
         </div>
       </div>

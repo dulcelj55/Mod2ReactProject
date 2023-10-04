@@ -1,8 +1,10 @@
 import "./index.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { CopyBlock, dracula } from "react-code-blocks";
 
 const Toggle = () => {
+  
   let code = `
   
   import { useState } from "react";
@@ -22,10 +24,32 @@ const Toggle = () => {
   
   export default Toggle
   `
+  let code1 = `import { useState } from "react"
+
+  const ToggleComponent = () => {
+      const [isOn, setIsOn] = useState(false);
+  
+      const toggleState = () =>{
+          setIsOn(!isOn);
+      };
+    return (
+      <div>
+          <button onClick={toggleState} >Click Here</button>
+          <p>State is {isOn ? 'ON' : 'OFF'}</p>
+  
+  
+      </div>
+    )
+  }`
 const[isMessageVisible, setMessageVisible]= useState(false)
 const toggleMessage = () => {
   setMessageVisible(!isMessageVisible)
 }
+const [isOn, setIsOn] = useState(false);
+  
+const toggleState = () =>{
+    setIsOn(!isOn);
+};
   return (
     <div className="scroll">
       <Link to="/ComponentsP"><button>BACK TO COMPONENTS</button></Link>
@@ -42,13 +66,36 @@ const toggleMessage = () => {
             <button onClick={toggleMessage}>Toggle Message</button>
             {isMessageVisible && (<p>YOU'RE LEARNING REACT! <br/>This is a hidden message that can be toggled.</p>)}
           </div>
-          
+          <br/>
+          <div>
+            <p>Here's another simple example:</p>
+          <button onClick={toggleState} >Click Here</button>
+          <p>State is {isOn ? 'ON' : 'OFF'}</p>
+  
+  
+      </div>
          
         </div>
 
         <div className="code">
           <p className="title">Code:</p>
-          <code>{code}</code>
+          <CopyBlock
+          language={"jsx"}
+          text={code}
+          showLineNumbers={true}
+          theme={dracula}
+          wrapLines={true}
+          codeBlock
+        />
+        <br/>
+        <CopyBlock
+          language={"jsx"}
+          text={code1}
+          showLineNumbers={true}
+          theme={dracula}
+          wrapLines={true}
+          codeBlock
+        />
         </div>
       </div>
     </div>

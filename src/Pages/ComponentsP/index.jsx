@@ -39,8 +39,8 @@ const ComponentsP = () => {
       <Link to="/counter">
         <button>Counter</button>
       </Link>
-      <Link to="/randomvariable">
-        <button>Random variable</button>
+      <Link to="/list">
+        <button>List Items </button>
       </Link>
       <Link to="/inputform">
         <button>Input Form</button>

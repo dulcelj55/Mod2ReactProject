@@ -1,5 +1,5 @@
 
-
+import { CopyBlock, dracula } from "react-code-blocks";
 import "./index.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -33,7 +33,14 @@ const TrafficLight = () => {
 
         <div className="code">
           <p className="title">Code:</p>
-          <code>{code}</code>
+          <CopyBlock
+          language={"jsx"}
+          text={code}
+          showLineNumbers={true}
+          theme={dracula}
+          wrapLines={true}
+          codeBlock
+        />
         </div>
       </div>
     </div>

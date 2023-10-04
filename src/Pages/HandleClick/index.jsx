@@ -1,17 +1,17 @@
 import "./index.css";
 import { useState } from "react";
 import {Link} from "react-router-dom"
+import { CopyBlock, dracula } from "react-code-blocks";
 
 const HandleClick = () => {
   const [buttonColor, setBackgroundColor] = useState("red");
-  let code = `
-  import "./index.css";
+  let code = `import "./index.css";
   import { useState } from "react";
   
   const HandleClick = () => {
-    const [buttonColor, setBackgroundColor] = useState("red");
+  const [buttonColor, setBackgroundColor] = useState("red");
    
-    const color = () => {
+  const color = () => {
       const setBGC = Math.floor(Math.random() * 16777215).toString(16);
       return "#" + setBGC;
     };
@@ -48,8 +48,8 @@ const HandleClick = () => {
         variables and how to change or "set" them. Revist state//add link to
         state// here if this is confusing. We can change state by updating/
         rerendering variables using event listeners. Event listens are functions
-        that you can code ABOVE the return statement or code INSIDE the return
-        statement. When referencing code from above the return statement  you
+        that you can code ABOVE the return statement in JavaScript or code INSIDE the return
+        statement using JSX. When referencing code from above the return statement  you
         must use curly brackets. If you notice there is function above the return statement and the click event is in 
       </h4>
 
@@ -69,7 +69,14 @@ const HandleClick = () => {
 
         <div className="code">
           <p className="title">Code:</p>
-          <code>{code}</code>
+          <CopyBlock
+          language={"jsx"}
+          text={code}
+          showLineNumbers={true}
+          theme={dracula}
+          wrapLines={true}
+          codeBlock
+        />
         </div>
       </div>
     </div>

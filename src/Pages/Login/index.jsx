@@ -1,23 +1,15 @@
-import React from 'react'
+import "./index.css"
 import {useState}from 'react'
 
 const Login = () => {
   const [userName, setUserName]= useState('')
-    const [userImage, setUserImage]= useState('')
-    const [userBio, setUserBio]= useState('')
-    const [userNewName, setUserNewName]= useState('')
-    const [userNewImage, setUserNewImage]= useState('')
-    const [userNewBio, setUserNewBio]= useState('')
-    const[isSubmitted, setIsSubmitted]= useState(false)
-
-
-    const profile= [userNewName, userNewImage, userNewBio]
+  const [userNewName, setUserNewName]= useState('')
+  const[isSubmitted, setIsSubmitted]= useState(false)
+  const profile= [userNewName]
 
     const showInfo = (e) =>{
     e.preventDefault()
     setUserNewName(userName)
-    setUserNewImage(userImage)
-    setUserNewBio(userBio)
     setIsSubmitted(true)                
     }
 
@@ -26,23 +18,21 @@ const Login = () => {
  const returnInputsOrTexts =()=>{
         if (!isSubmitted){
             return(
-                <>
-                <h3>Please Enter your Information</h3>
-            <form onSubmit={showInfo}>
-                <input value={userName} onChange={(e)=> setUserName(e.target.value)} placeholder= 'User Name'></input>
-                <input value={userImage}  onChange={(e)=> setUserImage(e.target.value)} placeholder= 'Use Image'></input>
-                <input value={userBio} onChange={(e)=> setUserBio(e.target.value)} placeholder='UserBio'></input>
-                <button >Submit</button>
-            </form>         
-            </>
+                <div>
+                <h3 className="center" >Please Enter your Name</h3>
+            <form className="center" onSubmit={showInfo}>
+                <input value={userName} onChange={(e)=> setUserName(e.target.value)} placeholder= 'User Name' userName= {userName}></input>
+               <button >Submit</button>
+            </form >         
+            </div>
             )
         }else{
             return(
-            <>
-                <p>User Image: {profile[1]}</p>
-                <p>You're logged in as: {profile[0]}</p>
-                <p>User Bio: {profile[2]}</p>       
-            </>
+            <div className="banner">
+                <p className="center">Welcome {profile[0]}!</p>
+                <p className="center"> I hope you learn something new today!</p>
+                     
+            </div>
             )
         }
 
@@ -50,7 +40,8 @@ const Login = () => {
 
   return (
     <>
-    <div>UserProfileCard</div>
+   
+    
     {returnInputsOrTexts()}
   </>
  

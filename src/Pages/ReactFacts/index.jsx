@@ -12,14 +12,17 @@ const ReactFacts = () => {
   import {useState} from  'react'
   import { useNavigate } from "react-router-dom"
   import { CopyBlock, dracula } from "react-code-blocks";`;
-  let code3= `import section:
-  import {useState} from  'react'
+  let code3= `import {useState} from  'react'
+  // This is where all imports go
+
+  
   const NameOfComponent =({this is where you would pass props})=>{
-    {this area is where you would put useState and write functions in JavaScript}
-  }
+    // This area is where you would put useState and write functions in JavaScript
+ Example: 
   const [input, setInput]= useState ("")
+
   return(
-    this area is what will show up on the DOM
+  //   This area is what will show up on the DOM
     <h1 className= "title"> Hello World! </h1>
    {/*this is how you comment out items in JSX*/}
   )

@@ -39,15 +39,17 @@ import ChangeColor from './Pages/ChangeColor'
 import TrafficLight from './Pages/TrafficLight'
 import CodeDisplay from './Pages/CodeDisplay'
 import List from './Pages/List'
+import{useState} from 'react'
 
 function App() {
+  const [userNewName, setUserNewName] = useState("");
  
 
   return (
    
     <div className='app'>
     <Header id="header-container"/>
-      <Navbar id="nav-container"/>
+      <Navbar id="nav-container" userNewName={userNewName}/>
       <SideBar id="sidebar-container"/>
       <Routes >
         <Route path="/" element={<Home/>}/>
@@ -58,7 +60,7 @@ function App() {
         <Route path="/examples" element={<Examples/>}/>
         <Route path="/game" element={<Game/>}/>
         <Route path="/hooks" element={<Hooks/>}/>
-        <Route path="/login" element={<Login/>}/>
+        <Route path="/login" element={<Login  setUserNewName={setUserNewName} userNewName={userNewName}   />}/>
         <Route path="/pagesp" element={<PagesP/>}/>
         <Route path="/props" element={<Props/>}/>
         <Route path="/reactfacts" element={<ReactFacts/>}/>
@@ -73,7 +75,7 @@ function App() {
         <Route path="/componentsp" element={<ComponentsP/>}/>
         <Route path="/handleclick" element={<HandleClick/>}/>  
         <Route path="/counter" element={<Counter/>}/>
-        <Route path="/randomvariable" element={<List/>}/>
+        <Route path="/list" element={<List/>}/>
         <Route path="/inputform" element={<InputForm/>}/>
         <Route path="/newsticker" element={<NewsTicker/>}/>
         <Route path="/toggle" element={<Toggle/>}/>

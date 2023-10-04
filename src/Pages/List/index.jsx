@@ -4,35 +4,43 @@ import { CopyBlock, dracula } from "react-code-blocks";
 import React, { useState } from 'react'
 
 const List = () => {
-  const [item, setItem]= useState('');
-  const [items, setItems]= useState(["Start of List"]);
+ 
+  const [items, setItems]= useState([]);
   const [newInput, setNewInput]= useState([" "]);
-      let code = `
-      import React, { useState } from 'react'
-
-      const ListComponent = () => {
-          const [items, setItems]= useState([]);
-        return (
-          <div>
-               <button onClick={()=> setItems([...items, "I'm a new item!"])}>Add Item</button>
-              <ul>
-                  {items.map((item, index)=> {
-                      <li key={index}>{item}</li>
-                  }
-                  )}
-              </ul>
-              
-              
-              
-               </div>
-        )
+      let code = `import "./index.css"
+import React, { useState } from 'react'
+const List = () => {
+const [items, setItems]= useState([]);
+const [newInput, setNewInput]= useState([" "]);
+const motion =() => {
+      setItems([...items, newInput])
+      setNewInput('')
       }
-      
-      export default ListComponent`;
+    
+      return (
+  <div>
+      <input value={newInput} onChange={(e)=> setNewInput(e.target.value)}></input>
+      <button onClick={motion}>Add Item</button>
+        <ul>
+            {items.map((item, index)=> {
+              return<li key={index}>{item}</li>
+                  }
+            )}
+        </ul>
+  </div>
+                     
+      );
+    };
+    
+
+
+export default List
+      `;
      
-      const motion =(e) => {
-       e.preventDefault()
-        setItems([...items])
+      const motion =() => {
+       
+        setItems([...items, newInput])
+        setNewInput('')
       }
     
       return (
@@ -44,12 +52,12 @@ const List = () => {
             <div className="lesson">
               <p className="title">Output:</p>
               <div>
-                <input value={newInput} onClick={()=> setItem(e.target.value)}></input>
+                <input value={newInput} onChange={(e)=> setNewInput(e.target.value)}></input>
                 
                <button onClick={motion}>Add Item</button>
-              <ul>
+              <ul> Start List:
                   {items.map((item, index)=> {
-                      <li key={index}>{item}</li>
+                    return<li key={index}>{item}</li>
                   }
                   )}
               </ul>

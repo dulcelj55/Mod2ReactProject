@@ -63,11 +63,13 @@ export default ChangeColor
       <div className="container">
         <div className="lesson">
           <p className="title">Output:</p>
+          <p>Click a color button.</p>
 
           <div>
             <button id="border" onClick={() => setColor("blue")}>Blue</button>
             <button onClick={() => setColor("red")}>Red</button>
             <button onClick={() => setColor("green")}>Green</button>
+            <br/>
             <br/>
             <button className={color}>The current Color is {color}</button>
           </div>

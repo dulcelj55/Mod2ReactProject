@@ -30,9 +30,10 @@ const ReactFacts = () => {
   
   export default NameOfComponents`
   return (
+    
     <div id="react-container">
-      <p>
-        {" "}
+      <h1 className="title"> What is React?</h1>
+        
         React is a JavaScript library tool that has several characteristics of a
         framework. It was created by Jordan Walke, a software engineer at Meta
         (Facebook) in 2011. React is made up of components that act as elements
@@ -40,8 +41,8 @@ const ReactFacts = () => {
         JSX, thus the need for React to translation into HTML files. When using
         React, several libraries need to be installed. Once installed, they need
         to be imported. Some examples include:
-        <br />
-        <br />
+        <br/>
+        <br/>
         <CopyBlock
           language={"jsx"}
           text={code1}
@@ -58,7 +59,7 @@ const ReactFacts = () => {
           wrapLines={true}
           codeBlock
         />
-      </p>
+      
       <br />
       <p>
         The newest way of navigate('/startUp') can be found using Vite. Some

@@ -5,7 +5,7 @@ import Header from './Components/Header'
 import SideBar from './Components/SideBar'
 import Home from './Pages/Home'
 import Footer from './Components/Footer'
-import Basics from './Pages/Basics'
+import Basics from './Pages/Rendering'
 import CodeExamples from './Pages/CodeExamples'
 import Game from './Pages/Game'
 import Login from './Pages/Login'
@@ -40,6 +40,7 @@ import TrafficLight from './Pages/TrafficLight'
 import CodeDisplay from './Pages/CodeDisplay'
 import List from './Pages/List'
 import{useState} from 'react'
+import Rendering from './Pages/Rendering'
 
 function App() {
   const [userNewName, setUserNewName] = useState("");
@@ -53,7 +54,7 @@ function App() {
       <SideBar id="sidebar-container"/>
       <Routes >
         <Route path="/" element={<Home/>}/>
-        <Route path="/basics" element={<Basics/>}/>
+        <Route path="/rendering" element={<Rendering/>}/>
         <Route path="/helloworld" element={<HelloWorld/>}/>
         <Route path="/changecolor" element={<ChangeColor/>}/>
         <Route path="/codeexamples" element={<CodeExamples/>}/>

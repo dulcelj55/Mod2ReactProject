@@ -4,7 +4,14 @@ import {useState} from "react"
 import { Link } from "react-router-dom";
 
 const NewsTicker = () => {
-  const [news, setNews]= useState(["Paris has beg bugs","Jimmy Carter turns 99", "Taylor Swift dates football Player", "Mojo Dojo Casa House Burns"]) 
+  const [news, setNews]= 
+  useState(["Paris has beg bugs",
+
+  "Jimmy Carter turns 99",
+
+  "Taylor Swift dates football Player",
+
+   "Mojo Dojo Casa House Burns"]) 
   const [currentNewsIndex, setCurrentNewsIndex]= useState(0)
   const nextNewsItem =(e)=>{
     e.preventDefault
@@ -14,9 +21,7 @@ const NewsTicker = () => {
      }
  }
 
-  let code = `
-
-  import {useState} from "react"
+  let code = `import {useState} from "react"
   
   const NewsTicker = (props) => {
     const [news, setNews]= useState(["Paris has beg bugs","Jimmy Carter turns 99", "Taylor Swift dates football Player", "Mojo Dojo Casa House Burns"])
@@ -41,7 +46,7 @@ const NewsTicker = () => {
     )
   }
   
-  export default NewsTicker`;
+  export default NewsTicker;`
 
   return (
     <div className="scroll">

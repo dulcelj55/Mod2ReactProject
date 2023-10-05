@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./index.css";
 
-const Basics = () => {
+const Rendering = () => {
  
 
   return (
@@ -24,4 +24,4 @@ const Basics = () => {
   );
 };
 
-export default Basics;
+export default Rendering;

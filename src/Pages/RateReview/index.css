@@ -1,0 +1,7 @@
+.stars{
+    display: flex;
+    flex-direction: row;
+}
+.color-yellow{
+   color: yellow ;
+}

@@ -5,11 +5,15 @@ import { CopyBlock, dracula } from "react-code-blocks";
 
 
 const InputForm = () => {
+  const [point, setPoint] = useState(true)
   const{score, setScore}= useContext(primaryContext)
   const changeHandle =(e)=>{
     e.preventDefault()
-    setScore(score +1)
-    console.log ("works")
+    if (point){
+      setScore(score +1)
+      setPoint(false)
+     
+    }
   }
   let code = `import {useState}from 'react'
   const [userName, setUserName]= useState('')

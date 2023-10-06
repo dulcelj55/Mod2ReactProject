@@ -4,14 +4,17 @@ import { primaryContext } from '../../Context/primaryContext'
 import {  useContext, useState } from "react";
 
 const Arrays = () => {
+  const [point, setPoint] = useState(true)
  
   let code = `
       code goes inside here`;
       const {score, setScore}= useContext(primaryContext)
   const changeHandle =(e)=>{
     e.preventDefault()
+    if(point){
     setScore(score +1)
-    console.log ("works")
+    setPoint(false)
+    }
   }
 
   return (
@@ -35,9 +38,10 @@ const Arrays = () => {
           wrapLines={true}
           codeBlock
         />
-         <button onClick={changeHandle}>Click Here for a Point!</button>
+        
         </div>
       </div>
+      <button onClick={changeHandle}>Click Here for a Point!</button>
     </div>
 
 

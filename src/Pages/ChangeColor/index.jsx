@@ -6,6 +6,7 @@ import { primaryContext } from '../../Context/primaryContext'
 import {  useContext} from "react";
 
 const ChangeColor = () => {
+  const [point, setPoint] = useState(true)
   const [color, setColor] = useState("grey");
   const [boxClass, setBoxClass] = useState("original-class");
   let code = `
@@ -48,8 +49,12 @@ export default ChangeColor
   const {score, setScore}= useContext(primaryContext)
   const changeHandle =(e)=>{
     e.preventDefault()
-    setScore(score +1)
-    console.log ("works")
+    if(point){
+      setScore(score +1)
+      setPoint(false)
+    }
+   
+   
   }
 
   return (

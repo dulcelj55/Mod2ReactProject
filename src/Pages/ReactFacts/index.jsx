@@ -1,14 +1,15 @@
 import "./index.css";
-
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { CopyBlock, dracula } from "react-code-blocks";
 import { primaryContext } from '../../Context/primaryContext'
-import {  useContext } from "react";
+import {  useContext,useState } from "react";
 
 
 
 
 const ReactFacts = () => {
+  const [point, setPoint] = useState(true)
   const navigate = useNavigate();
   let code1 = `npm install
   npm install react-router-dom
@@ -37,8 +38,11 @@ const ReactFacts = () => {
 const {score, setScore}= useContext(primaryContext)
   const changeHandle =(e)=>{
     e.preventDefault()
-    setScore(score +1)
-    console.log ("works")
+    if (point){
+      setScore(score +1)
+      setPoint(false)
+     
+    }
   }
 
   return (
@@ -74,7 +78,7 @@ const {score, setScore}= useContext(primaryContext)
       
       <br />
       <p>
-        The newest way of {navigate('/startUp')} can be found using Vite. Some
+        The newest way of <Link to = "/startup">creating a project</Link> can be found using Vite. Some
         previous knowledge is needed when using React including: HTML, CSS, and
         JavaScript. Some skills to revisit include .map, tinary functions, and
         spread operators. Because React uses JSX here are some things to note:
@@ -94,8 +98,8 @@ const {score, setScore}= useContext(primaryContext)
       In React there are mulitple CSS files. Index.css is the main file that
       will effect the whole project, ie border box. App.css will only design
       what's in the App.jsx folder. Example could be a grid layout. Other
-      index.css files are tied to the Componenets and only influence those
-      components.
+      index.css files are tied to the Componenets and usually only influence those
+      components. In some cases, if a className is not declared in that component, the style will continue through out the project.
 
       <button onClick={changeHandle}>Click Here for a Point!</button>
     </div>

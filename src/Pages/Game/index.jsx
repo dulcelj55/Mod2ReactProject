@@ -1,12 +1,16 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { primaryContext } from '../../Context/primaryContext'
 
 const Game = () => {
+  const [point, setPoint] = useState(true)
   const{score, setScore}= useContext(primaryContext)
   const changeHandle =(e)=>{
     e.preventDefault()
-    setScore(score +1)
-    console.log ("works")
+    if (point){
+      setScore(score +1)
+      setPoint(false)
+     
+    }
   }
   
   return (

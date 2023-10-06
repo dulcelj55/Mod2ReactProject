@@ -5,11 +5,15 @@ import { useContext, useState } from "react";
 import "./index.css"
 
 const Hooks = () => {
+  const [point, setPoint] = useState(true)
   const { score, setScore } = useContext(primaryContext);
   const changeHandle = (e) => {
     e.preventDefault();
-    setScore(score + 1);
-    console.log("works");
+    if (point){
+      setScore(score +1)
+      setPoint(false)
+     
+    }
   };
   let code = `import {useState} from 'react`;
   return (
@@ -19,7 +23,7 @@ const Hooks = () => {
         {" "}
         Hooks help manage components making it easier to reuse data and write
         cleaner code. You can tell you are using a hook by the "use" in front of
-        the word. Hooks must be imported by the library they are from. Here are examples of the what Hooks
+        the word. They call them hooks because they hook on to the life cycle. Hooks must be imported by the library they are from. Here are examples of the what Hooks
         look like in code. Click each button to see a demo.
       </p>
       <div className="states">
@@ -39,6 +43,9 @@ const Hooks = () => {
           <button>UseDispatch</button>
         </Link>
       </div>
+      <br/>
+      <br/>
+      <br/>
       <button className="gameB" onClick={changeHandle}>Click Here for a Point!</button>
     </div>
   );

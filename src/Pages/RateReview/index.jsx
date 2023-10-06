@@ -5,11 +5,15 @@ import { CopyBlock, dracula } from "react-code-blocks";
 import { primaryContext } from '../../Context/primaryContext'
 import {  useContext, useState } from "react";
 const RateReview = () => {
+  const [point, setPoint] = useState(true)
   const{score, setScore}= useContext(primaryContext)
   const changeHandle =(e)=>{
     e.preventDefault()
-    setScore(score +1)
-    console.log ("works")
+    if (point){
+      setScore(score +1)
+      setPoint(false)
+     
+    }
   }
   const [rating, setRating]= useState(0)
   const [isSubmitted, setIsSubmitted] = useState(false)

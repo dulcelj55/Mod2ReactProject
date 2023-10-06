@@ -4,12 +4,15 @@ import { primaryContext } from '../../Context/primaryContext'
 import {  useContext, useState } from "react";
 
 const State = () => {
-
+  const [point, setPoint] = useState(true)
   const{score, setScore}= useContext(primaryContext)
   const changeHandle =(e)=>{
     e.preventDefault()
+    if (point){
     setScore(score +1)
-    console.log ("works")
+    setPoint(false)
+   
+  }
   }
 
   let code = `const [count, setCount]= useState(1)

@@ -3,11 +3,15 @@ import { primaryContext } from '../../Context/primaryContext'
 import {  useContext, useState } from "react";
 
 const StartUp = () => {
+  const [point, setPoint] = useState(true)
   const{score, setScore}= useContext(primaryContext)
   const changeHandle =(e)=>{
     e.preventDefault()
-    setScore(score +1)
-    console.log ("works")
+    if (point){
+      setScore(score +1)
+      setPoint(false)
+     
+    }
   }
 
   return (
@@ -54,6 +58,7 @@ const StartUp = () => {
 // main jsx puts it into the root
 no modules folder on git hub
       </div>
+      <br/>
       <button onClick={changeHandle}>Click Here for a Point!</button>
     </>
   );

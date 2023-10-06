@@ -1,9 +1,16 @@
 import "./index"
 import { CopyBlock, dracula } from "react-code-blocks";
+import { primaryContext } from '../../Context/primaryContext'
+import {  useContext, useState } from "react";
 
 const QuizCard = () => {
  
-    
+  const{score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
 
     
       let code = `
@@ -32,6 +39,7 @@ const QuizCard = () => {
         />
             </div>
           </div>
+          <button onClick={changeHandle}>Click Here for a Point!</button>
         </div>
       );
     };

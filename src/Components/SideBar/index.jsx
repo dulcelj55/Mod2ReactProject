@@ -5,7 +5,7 @@ const SideBar = () => {
     <>
     <section className="links" id="sidebar">
     <h1>React Elements</h1>
-    
+    <Link to= "/ReactFacts">What is React?</Link>
     <br/>
     <Link to="/startup">Create a Project</Link>
     <br/>
@@ -21,10 +21,9 @@ const SideBar = () => {
     <br/>
     <Link to="/pagesp">How to make Pages</Link>
     <br/>
-    <Link to="/URL_Params">URL and Params</Link>
+    <Link to="/contextp">Context</Link>
     <br/>
-    context  
-    redux
+   
 
     </section>
 

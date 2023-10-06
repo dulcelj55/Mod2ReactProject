@@ -1,0 +1,12 @@
+.hooks{
+    padding:20px;
+}
+.states{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.gameB{
+    
+   background-color: chocolate;
+}

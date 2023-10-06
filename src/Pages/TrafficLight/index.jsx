@@ -2,9 +2,17 @@
 import { CopyBlock, dracula } from "react-code-blocks";
 import "./index.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { primaryContext } from '../../Context/primaryContext'
+import {  useContext, useState } from "react";
 
 const TrafficLight = () => {
+  const{score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
+
     const [color, setColor]= useState("grey")
   // let code = `
   // import { CopyBlock, dracula } from "react-code-blocks";
@@ -90,6 +98,7 @@ const TrafficLight = () => {
         />
         </div>
       </div>
+      <button onClick={changeHandle}>Click Here for a Point!</button>
     </div>
   );
 };

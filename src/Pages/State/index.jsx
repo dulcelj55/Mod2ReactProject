@@ -1,7 +1,17 @@
 import React from 'react'
 import { CopyBlock, dracula } from "react-code-blocks";
+import { primaryContext } from '../../Context/primaryContext'
+import {  useContext, useState } from "react";
 
 const State = () => {
+
+  const{score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
+
   let code = `const [count, setCount]= useState(1)
   const [name, setName]= useState("Bob")
   const [isOn, setIsON]= useState(true)
@@ -26,7 +36,7 @@ const State = () => {
 
          In normal javascript we have varibles and can change them; in react we have state and only the DOM can change state. When state is rerender the program runs again. When using state we want to "push state up" meaning if possbile we should try to have our state in the App.jsx file.  Any input variables will start as empty strings and need to be tied to state. This sometimes will need two variables, the (current) state, and the (new) state. When state is reassigned in a component it refelcts on the render, therefore you can't have mulitple assignemnts of a state in one component. Go to useState under Hooks to find out how state is used. 
 
-
+         <button onClick={changeHandle}>Click Here for a Point!</button>
     </div>
   )
 }

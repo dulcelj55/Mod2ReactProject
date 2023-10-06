@@ -1,10 +1,16 @@
 import "./index.css"
 import {Link} from 'react-router-dom'
 import { CopyBlock, dracula } from "react-code-blocks";
-import React, { useState } from 'react'
+import { primaryContext } from '../../Context/primaryContext'
+import {  useContext, useState } from "react";
 
 const List = () => {
- 
+  const{score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
   const [items, setItems]= useState([]);
   const [newInput, setNewInput]= useState([" "]);
       let code = `import "./index.css"
@@ -79,6 +85,7 @@ export default List
         />
             </div>
           </div>
+          <button onClick={changeHandle}>Click Here for a Point!</button>
         </div>
       );
     };

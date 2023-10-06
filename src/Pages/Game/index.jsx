@@ -1,8 +1,21 @@
-import React from 'react'
+import { useContext } from 'react'
+import { primaryContext } from '../../Context/primaryContext'
 
 const Game = () => {
+  const{score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
+  
   return (
-    <div>I am game page</div>
+    <h1>Every Link has a point!
+      <br/> Try to collect them all!
+      <br/> So far your score is {score}
+      <br/> Get your first point here!
+      <button onClick={changeHandle}>Click Here for a Point!</button>
+      </h1>
   )
 }
 

@@ -2,6 +2,8 @@ import "./index.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { CopyBlock, dracula } from "react-code-blocks";
+import { primaryContext } from '../../Context/primaryContext'
+import {  useContext} from "react";
 
 const ChangeColor = () => {
   const [color, setColor] = useState("grey");
@@ -43,9 +45,12 @@ export default ChangeColor
   }
   
   export default ChangingClasses`;
-  const handleChange = (e) => {
-    setName(e.target.value);
-  };
+  const {score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
 
   return (
     <div className="scroll">
@@ -104,6 +109,7 @@ export default ChangeColor
           />
         </div>
       </div>
+      <button onClick={changeHandle}>Click Here for a Point!</button>
     </div>
   );
 };

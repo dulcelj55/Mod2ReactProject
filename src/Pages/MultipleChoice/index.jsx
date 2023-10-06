@@ -1,7 +1,15 @@
 import "./index.css";
 import { CopyBlock, dracula } from "react-code-blocks";
+import { primaryContext } from '../../Context/primaryContext'
+import {  useContext, useState } from "react";
 
 const MultipleChoice = () => {
+  const{score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
  
 
 
@@ -31,6 +39,7 @@ const MultipleChoice = () => {
         />
           </div>
         </div>
+        <button onClick={changeHandle}>Click Here for a Point!</button>
       </div>
     );
   };

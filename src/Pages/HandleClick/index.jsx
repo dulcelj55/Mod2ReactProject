@@ -1,9 +1,17 @@
 import "./index.css";
-import { useState } from "react";
+
 import {Link} from "react-router-dom"
 import { CopyBlock, dracula } from "react-code-blocks";
+import { primaryContext } from '../../Context/primaryContext'
+import {  useContext, useState } from "react";
 
 const HandleClick = () => {
+  const{score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
   const [buttonColor, setBackgroundColor] = useState("red");
   let code = `import "./index.css";
   import { useState } from "react";
@@ -79,6 +87,7 @@ const HandleClick = () => {
         />
         </div>
       </div>
+      <button onClick={changeHandle}>Click Here for a Point!</button>
     </div>
   );
 };

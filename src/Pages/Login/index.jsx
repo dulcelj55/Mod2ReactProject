@@ -1,7 +1,15 @@
 import "./index.css";
-import { useState } from "react";
+import { primaryContext } from '../../Context/primaryContext'
+import {  useContext, useState } from "react";
 
 const Login = ({userNewName, setUserNewName}) => {
+
+  const{score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
   const [userName, setUserName] = useState("");
  
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -39,7 +47,8 @@ const Login = ({userNewName, setUserNewName}) => {
     }
   };
 
-  return <>{returnInputsOrTexts()}</>;
+  return <>{returnInputsOrTexts()}
+  <button onClick={changeHandle}>Click Here for a Point!</button></>;
 };
 
 export default Login;

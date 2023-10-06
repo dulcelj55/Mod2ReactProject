@@ -1,9 +1,21 @@
 import React from 'react'
 import { CopyBlock, dracula } from "react-code-blocks";
+import { primaryContext } from '../../Context/primaryContext'
+import {  useContext, useState } from "react";
 
 const URL_Params = () => {
+
+  const{score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
+
   return (
-    <div>URL_Params page</div>
+    <div>URL_Params page
+      <button onClick={changeHandle}>Click Here for a Point!</button>
+    </div>
 
     // queires help identify cecrtain locations on a website or application
     // look for ? 

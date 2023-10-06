@@ -1,7 +1,14 @@
 import { CopyBlock, dracula } from "react-code-blocks"
+import { primaryContext } from '../../Context/primaryContext'
+import {  useContext, useState } from "react";
 
 const Props = () => {
-  
+  const{score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
   let code= `const Login = (props) => {
   const Login = ({userNewName, setUserNewName}) => {`
 
@@ -50,6 +57,7 @@ const Props = () => {
           wrapLines={true}
           codeBlock
         />
+        <button onClick={changeHandle}>Click Here for a Point!</button>
     </div>
   )
 }

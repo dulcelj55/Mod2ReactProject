@@ -41,6 +41,8 @@ import CodeDisplay from './Pages/CodeDisplay'
 import List from './Pages/List'
 import{useState} from 'react'
 import Rendering from './Pages/Rendering'
+import { useContext } from 'react'
+import ContextP from './Pages/ContextP'
 
 function App() {
   const [userNewName, setUserNewName] = useState("");
@@ -86,6 +88,7 @@ function App() {
         <Route path="/propsc" element={<PropsC/>}/>
         <Route path="/imagecarousel" element={<ImageCarousel/>}/>
         <Route path="/arrays" element={<Arrays/>}/>
+        <Route path="/contextp" element={<ContextP/>}/>
         <Route path="/trafficlight" element={<TrafficLight/>}/>
         <Route path="/test" element={ 
           <CodeDisplay 

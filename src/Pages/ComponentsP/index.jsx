@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
 import './index.css'
+import { primaryContext } from '../../Context/primaryContext'
+import {  useContext, useState } from "react";
 
 const ComponentsP = () => {
+  const {score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
   return (
     <div id="components">
       <h1 className="h1">Components</h1>
@@ -80,6 +88,7 @@ const ComponentsP = () => {
       </Link>
       </div>
       </div>
+      <button onClick={changeHandle}>Click Here for a Point!</button>
     </div>
   );
 };

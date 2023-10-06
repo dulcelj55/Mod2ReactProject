@@ -1,7 +1,12 @@
 import "./index.css";
-import { useState } from "react";
+
 import { useNavigate } from "react-router-dom";
 import { CopyBlock, dracula } from "react-code-blocks";
+import { primaryContext } from '../../Context/primaryContext'
+import {  useContext } from "react";
+
+
+
 
 const ReactFacts = () => {
   const navigate = useNavigate();
@@ -11,7 +16,7 @@ const ReactFacts = () => {
   let code2 = `import "./index.css"
   import {useState} from  'react'
   import { useNavigate } from "react-router-dom"
-  import { CopyBlock, dracula } from "react-code-blocks";`;
+  import { CopyBlock, dracula } from "react-code-blocks";`
   let code3= `import {useState} from  'react'
   // This is where all imports go
 
@@ -29,6 +34,13 @@ const ReactFacts = () => {
   }
   
   export default NameOfComponents`
+const {score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
+
   return (
     
     <div id="react-container">
@@ -62,7 +74,7 @@ const ReactFacts = () => {
       
       <br />
       <p>
-        The newest way of navigate('/startUp') can be found using Vite. Some
+        The newest way of {navigate('/startUp')} can be found using Vite. Some
         previous knowledge is needed when using React including: HTML, CSS, and
         JavaScript. Some skills to revisit include .map, tinary functions, and
         spread operators. Because React uses JSX here are some things to note:
@@ -84,6 +96,8 @@ const ReactFacts = () => {
       what's in the App.jsx folder. Example could be a grid layout. Other
       index.css files are tied to the Componenets and only influence those
       components.
+
+      <button onClick={changeHandle}>Click Here for a Point!</button>
     </div>
   );
 };

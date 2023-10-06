@@ -1,6 +1,15 @@
 import React from "react";
+import { primaryContext } from '../../Context/primaryContext'
+import {  useContext, useState } from "react";
 
 const StartUp = () => {
+  const{score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
+
   return (
     <>
       <div>
@@ -35,7 +44,17 @@ const StartUp = () => {
         This will give your project a dist folder. This is how the browser reads
         your final project.
       </div>
+      package.json is what holds our dependencies "tools we use"
+//         
+//         package-lock.json has the right versions of the tools we are using
+// src folder is where everything is/ home
+// app css is for the app folder
+// index css is for the whole project
+// app jsx is where we write our code
+// main jsx puts it into the root
+no modules folder on git hub
       </div>
+      <button onClick={changeHandle}>Click Here for a Point!</button>
     </>
   );
 };

@@ -1,9 +1,19 @@
 import {Link} from 'react-router-dom'
+import { primaryContext } from '../../Context/primaryContext'
+import {  useContext, useState } from "react";
 
 const UseEffect = () => {
+  const{score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
+
   return (
     <>
     <Link to="/Hooks"><button>Back</button></Link>
+    <button onClick={changeHandle}>Click Here for a Point!</button>
     </>
     // <div>
     //     a hook that is requested during a time of the components life cycle

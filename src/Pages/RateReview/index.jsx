@@ -1,9 +1,16 @@
 import "./index.css"
 import { CopyBlock, dracula } from "react-code-blocks";
-import {useState} from 'react'
-// import StarRateIcon from '@mui/icons-material/StarRate';
 
+// import StarRateIcon from '@mui/icons-material/StarRate';
+import { primaryContext } from '../../Context/primaryContext'
+import {  useContext, useState } from "react";
 const RateReview = () => {
+  const{score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
   const [rating, setRating]= useState(0)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [star, setStar] = useState (false)
@@ -125,6 +132,7 @@ const RateReview = () => {
         />
         </div>
       </div>
+      <button onClick={changeHandle}>Click Here for a Point!</button>
     </div>
   );
 };

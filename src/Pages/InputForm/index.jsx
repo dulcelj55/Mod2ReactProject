@@ -3,7 +3,14 @@ import {useState}from 'react'
 import {Link} from "react-router-dom"
 import { CopyBlock, dracula } from "react-code-blocks";
 
+
 const InputForm = () => {
+  const{score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
   let code = `import {useState}from 'react'
   const [userName, setUserName]= useState('')
   const [userAge, setUserAge]= useState('')
@@ -146,6 +153,7 @@ return (
         />
         </div>
       </div>
+      <button onClick={changeHandle}>Click Here for a Point!</button>
     </div>
   );
 };

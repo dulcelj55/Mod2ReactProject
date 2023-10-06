@@ -1,10 +1,18 @@
 import "./index.css";
 import { CopyBlock, dracula } from "react-code-blocks";
+import { primaryContext } from '../../Context/primaryContext'
+import {  useContext, useState } from "react";
 
 const Arrays = () => {
  
   let code = `
       code goes inside here`;
+      const {score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
 
   return (
     <div className="scroll">
@@ -27,6 +35,7 @@ const Arrays = () => {
           wrapLines={true}
           codeBlock
         />
+         <button onClick={changeHandle}>Click Here for a Point!</button>
         </div>
       </div>
     </div>

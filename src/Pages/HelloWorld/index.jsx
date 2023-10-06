@@ -1,8 +1,16 @@
 import "./index.css";
 import { Link } from "react-router-dom";
 import { CopyBlock, dracula } from "react-code-blocks";
+import { primaryContext } from '../../Context/primaryContext'
+import {  useContext, useState } from "react";
 
 const HelloWorld = () => {
+  const{score, setScore}= useContext(primaryContext)
+  const changeHandle =(e)=>{
+    e.preventDefault()
+    setScore(score +1)
+    console.log ("works")
+  }
   let code = `
   const HelloWorld = ()= {                                                              
   return ( 
@@ -39,6 +47,7 @@ const HelloWorld = () => {
         />
         </div>
       </div>
+      <button onClick={changeHandle}>Click Here for a Point!</button>
     </div>
   );
 };

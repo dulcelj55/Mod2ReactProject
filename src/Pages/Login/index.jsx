@@ -2,9 +2,10 @@ import "./index.css";
 import { primaryContext } from '../../Context/primaryContext'
 import {  useContext, useState } from "react";
 
-const Login = ({userNewName, setUserNewName}) => {
+const Login = () => {
   const [point, setPoint] = useState(true)
-  const{score, setScore}= useContext(primaryContext)
+  const{score, setScore, user, setUser, isSubmitted, setIsSubmitted}= useContext(primaryContext)
+ 
   const changeHandle =(e)=>{
     e.preventDefault()
     if (point){
@@ -13,15 +14,16 @@ const Login = ({userNewName, setUserNewName}) => {
      
     }
   }
-  const [userName, setUserName] = useState("");
  
-  const [isSubmitted, setIsSubmitted] = useState(false);
+ 
+ 
 
 
   const showInfo = (e) => {
     e.preventDefault();
-    setUserNewName(userName);
+    setUser(user);
     setIsSubmitted(true);
+   
   };
 
   const returnInputsOrTexts = () => {
@@ -31,10 +33,10 @@ const Login = ({userNewName, setUserNewName}) => {
           <h3 className="center">Please Enter your Name</h3>
           <form className="center" onSubmit={showInfo}>
             <input
-              value={userName}
-              onChange={(e) => setUserName(e.target.value)}
+              value={user}
+              onChange={(e) => setUser(e.target.value)}
               placeholder="User Name"
-              username={userName}
+             
             ></input>
             <button>Submit</button>
           </form>
@@ -43,7 +45,7 @@ const Login = ({userNewName, setUserNewName}) => {
     } else {
       return (
         <div className="banner">
-          <p className="center">Welcome {userNewName}!</p>
+          <p className="center">Welcome {user}!</p>
           <p className="center"> I hope you learn something new today!</p>
         </div>
       );

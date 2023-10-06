@@ -45,14 +45,14 @@ import { useContext } from 'react'
 import ContextP from './Pages/ContextP'
 
 function App() {
-  const [userNewName, setUserNewName] = useState("");
+  
  
 
   return (
    
     <div className='app'>
     <Header id="header-container"/>
-      <Navbar id="nav-container" userNewName={userNewName}/>
+      <Navbar id="nav-container" />
       <SideBar id="sidebar-container"/>
       <Routes >
         <Route path="/" element={<Home/>}/>
@@ -63,7 +63,7 @@ function App() {
         <Route path="/examples" element={<Examples/>}/>
         <Route path="/game" element={<Game/>}/>
         <Route path="/hooks" element={<Hooks/>}/>
-        <Route path="/login" element={<Login  setUserNewName={setUserNewName} userNewName={userNewName}   />}/>
+        <Route path="/login" element={<Login  />}/>
         <Route path="/pagesp" element={<PagesP/>}/>
         <Route path="/props" element={<Props/>}/>
         <Route path="/reactfacts" element={<ReactFacts/>}/>
@@ -118,7 +118,7 @@ function App() {
       </Routes>
       
     
-      <Footer id="footer-container"/>
+      <Footer id="footer-container" />
     </div>
   )
 }

@@ -14,12 +14,14 @@ const Game = () => {
   }
   
   return (
+    <div className="title">
     <h1>Every Link has a point!
       <br/> Try to collect them all!
       <br/> So far your score is {score}
       <br/> Get your first point here!
-      <button onClick={changeHandle}>Click Here for a Point!</button>
+      <br/><button onClick={changeHandle}>Click Here for a Point!</button>
       </h1>
+      </div>
   )
 }
 

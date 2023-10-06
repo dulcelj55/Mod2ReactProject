@@ -3,11 +3,14 @@
     grid-template-columns: 150px 1fr;   
     width: 150px;
     height: 80vh;
-    background: lightgray;
+   
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding-left: 20px;
+}
+.links{
+    background-color: lightgoldenrodyellow;
 }
 

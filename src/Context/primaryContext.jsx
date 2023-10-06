@@ -3,8 +3,10 @@ import {useState} from 'react'
 
  export const primaryContext = createContext();
     const PrimaryProvider = (props) =>{
-        const[user, setUser] = useState('BOB')
+    const[user, setUser] = useState('')
     const [score, setScore] = useState(0)
+    const [isSubmitted, setIsSubmitted] = useState('');
+
     
     return (
         <primaryContext.Provider value={
@@ -12,7 +14,10 @@ import {useState} from 'react'
                 user,
                 setUser,
                 score,
-                setScore
+                setScore,
+                isSubmitted,
+                setIsSubmitted
+
 
             }
         }>

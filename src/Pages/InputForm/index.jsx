@@ -1,7 +1,8 @@
 import "./index.css";
-import {useState}from 'react'
+import {useState, useContext}from 'react'
 import {Link} from "react-router-dom"
 import { CopyBlock, dracula } from "react-code-blocks";
+import { primaryContext } from '../../Context/primaryContext'
 
 
 const InputForm = () => {

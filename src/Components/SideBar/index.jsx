@@ -1,10 +1,12 @@
 import {Link} from 'react-router-dom'
+import './index.css'
 
 const SideBar = () => {
   return (
     <>
-    <section className="links" id="sidebar">
+    <section className="scroll" id="sidebar">
     <h1>React Elements</h1>
+    <br/>
     <Link to= "/ReactFacts">What is React?</Link>
     <br/>
     <Link to="/startup">Create a Project</Link>

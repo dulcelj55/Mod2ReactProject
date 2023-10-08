@@ -45,7 +45,7 @@ const ContextP = () => {
     `
   return (
     <div>
-    <div> Context</div>
+    
     <CopyBlock
     language={"jsx"}
     text={code}

@@ -16,7 +16,7 @@
 .lesson{
     background-color: bisque;
     padding: 20px;
-    border-radius: 15%;
+   
 
 }
 .scroll{
@@ -27,7 +27,7 @@
 }
 .code{
     padding:10px;
-    border-radius: 15%;
+   
     background-color: aquamarine;
 }
 #border{

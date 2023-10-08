@@ -47,8 +47,16 @@ const Counter = () => {
   export default Counter`;
 
   return (
+    <div className="bgcolor">
+   
+      <div className="topButtons">
+        <Link to="/ComponentsP">
+          <button>BACK TO COMPONENTS</button>
+        </Link>
+        <button onClick={changeHandle}>Click Here for a Point!</button>
+      </div>
     <div className="scroll">
-      <Link to="/ComponentsP"><button>BACK TO COMPONENTS</button></Link>
+      
       <h1 className="title">Counter</h1>
       <h4>This is an example of a simple counter.</h4>
 
@@ -76,7 +84,8 @@ const Counter = () => {
         />
         </div>
       </div>
-      <button onClick={changeHandle}>Click Here for a Point!</button>
+
+    </div>
     </div>
   );
 };

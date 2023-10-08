@@ -58,10 +58,12 @@ export default ChangeColor
   }
 
   return (
+    <div className="bgcolor">
     <div className="scroll">
-      <Link to="/ComponentsP">
-        <button>BACK TO COMPONENTS</button>
-      </Link>
+      <div className="topButtons">
+      <Link to="/ComponentsP"><button>BACK TO COMPONENTS</button></Link>
+      <button onClick={changeHandle}>Click Here for a Point!</button>
+      </div>
       <h1 className="title">Change Classes</h1>
       <h4>
         In many programs we want to change the className of elements for many
@@ -114,7 +116,8 @@ export default ChangeColor
           />
         </div>
       </div>
-      <button onClick={changeHandle}>Click Here for a Point!</button>
+      
+    </div>
     </div>
   );
 };

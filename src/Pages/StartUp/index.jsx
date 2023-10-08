@@ -16,7 +16,7 @@ const StartUp = () => {
 
   return (
     <>
-      <div>
+      <div id="startup">
         <h1>How to Start a Project</h1>
         <h4>
           There are many ways to create an appilcaiton in React version 18 but the most
@@ -25,16 +25,16 @@ const StartUp = () => {
       
 
       <div className="steps">
-        1.  Choose the folder you want your project in and navgate there in your Terminal. Next, type: npm create vite@latest projectname
+        1.  In your Terminal, choose the folder you want your project in and navigate there. Next, type: npm create vite@latest projectname
         <br />
-        2. confirm your project folder Name
+        2. Confirm your project folder Name
         <br />
         3. Choose React and JavaScript SWC when prompted
         <br />
         4. At this point you want to open your project either using "code ." or
         opening in VSCode.
         <br />
-        5. In the VSCode terminal type: npm install
+        5. In the VSCode terminal type: npm install. This brings all the node_modules to help run React.  Another thing to know is that React has such a large library, that when projects are saved to github, there is a built-it function that saves the file from bringing all the node_modules.  This also means that when projects are clone, they will need to reinstall npm.
         <br />
         6. Vite has it's own material in App.jsx and Index.css. Feel free to
         make changes to the HTML title, update/ clear App.jsx App.css and the index.css
@@ -42,21 +42,25 @@ const StartUp = () => {
         7. In the terminal  type: npm run dev. (Make sure you are in the right folder)This makes a http link that by
         holding the command and click button will show up in the broswer so you can see your project. This updates in real time.
         <br />
-        8. Create you project using components, pages, context out of the Source (src) folder.
+        8. Create your project using components, pages, context out of the Source (src) folder.
         <br />
         9. Towards the end of your project in the terminal type: npm run build.
         This will give your project a dist folder. This is how the browser reads
         your final project.
       </div>
-      package.json is what holds our dependencies "tools we use"
-//         
-//         package-lock.json has the right versions of the tools we are using
-// src folder is where everything is/ home
-// app css is for the app folder
-// index css is for the whole project
-// app jsx is where we write our code
-// main jsx puts it into the root
-no modules folder on git hub
+      Here are some other things to know:
+      <br/>
+      - package.json is what holds our dependencies "tools we use"
+      <br/>
+      - package-lock.json has the current versions of the tools we are using
+      <br/>
+      - Source (src) folder is where everything is located in
+      <br/>
+      - App.css is for the app folder; index.css is for the    whole project
+      <br/>
+      - App.jsx is where we write our outline for code if using components and pages. <br/>
+      -Main.jsx is the main file put in the root <br/>
+      -No modules folders are saved to git hub
       </div>
       <br/>
       <button onClick={changeHandle}>Click Here for a Point!</button>

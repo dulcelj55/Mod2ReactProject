@@ -23,7 +23,7 @@ const Hooks = () => {
         {" "}
         Hooks help manage components making it easier to reuse data and write
         cleaner code. You can tell you are using a hook by the "use" in front of
-        the word. They call them hooks because they hook on to the life cycle. Hooks must be imported by the library they are from. Here are examples of the what Hooks
+        the word. They call them hooks because they hook on to the life cycle of an Component. Hooks must be imported by the library they are from. Here are examples of the what Hooks
         look like in code. Click each button to see a demo.
       </p>
       <div className="states">
@@ -36,12 +36,7 @@ const Hooks = () => {
         <Link to="/UseEffect">
           <button>UseEffect</button>
         </Link>
-        <Link to="/UseSelector">
-          <button>UseSelector</button>
-        </Link>
-        <Link to="/UseDispatch">
-          <button>UseDispatch</button>
-        </Link>
+        
       </div>
       <br/>
       <br/>

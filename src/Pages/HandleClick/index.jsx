@@ -34,8 +34,8 @@ const HandleClick = () => {
                 onClick={() => setBackgroundColor(color)}
                 style={{ backgroundColor: buttonColor }}
               >
-                {" "}
-                Change Color By Clicking{" "}
+               
+                Change Color By Clicking
               </button>
             </div>
           </div>
@@ -52,17 +52,20 @@ const HandleClick = () => {
   };
 
   return (
+    <div className="bgcolor">
     <div className="scroll">
+      <div className="topButtons">
       <Link to="/ComponentsP"><button>BACK TO COMPONENTS</button></Link>
+      <button onClick={changeHandle}>Click Here for a Point!</button>
+      </div>
       <h1 className="title">Event Listeners</h1>
       <h4 className="info">
-        In React the DOM changes state. That's why we have to "state" our
-        variables and how to change or "set" them. Revist state//add link to
-        state// here if this is confusing. We can change state by updating/
+        In React the DOM changes state. That's why we have to declare our
+        variables and how to change or "set" them in useState. Revist <Link to="/state">What is State?</Link> if this is confusing. We can change state by updating/
         rerendering variables using event listeners. Event listens are functions
         that you can code ABOVE the return statement in JavaScript or code INSIDE the return
-        statement using JSX. When referencing code from above the return statement  you
-        must use curly brackets. If you notice there is function above the return statement and the click event is in 
+        statement using JSX. When referencing code from above the return statement you
+        must use curly brackets.
       </h4>
 
       <div className="container">
@@ -73,8 +76,8 @@ const HandleClick = () => {
               onClick={() => setBackgroundColor(color)}
               style={{ backgroundColor: buttonColor }}
             >
-              {" "}
-              Change Color By Clicking{" "}
+            
+              Change Color By Clicking
             </button>
           </div>
         </div>
@@ -91,7 +94,8 @@ const HandleClick = () => {
         />
         </div>
       </div>
-      <button onClick={changeHandle}>Click Here for a Point!</button>
+
+    </div>
     </div>
   );
 };

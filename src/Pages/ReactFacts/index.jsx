@@ -24,7 +24,7 @@ const ReactFacts = () => {
   
   const NameOfComponent =({this is where you would pass props})=>{
     // This area is where you would put useState and write functions in JavaScript
- Example: 
+ //Example: 
   const [input, setInput]= useState ("")
 
   return(
@@ -34,7 +34,8 @@ const ReactFacts = () => {
   )
   }
   
-  export default NameOfComponents`
+  export default NameOfComponents
+  //Don't forget to always export your component`
 const {score, setScore}= useContext(primaryContext)
   const changeHandle =(e)=>{
     e.preventDefault()
@@ -52,11 +53,10 @@ const {score, setScore}= useContext(primaryContext)
         
         React is a JavaScript library tool that has several characteristics of a
         framework. It was created by Jordan Walke, a software engineer at Meta
-        (Facebook) in 2011. React is made up of components that act as elements
-        that will be compiled into an HTML file using JSX. Browsers cannot read
+        (Facebook) in 2011. React is made up of components that will become elements compiled into an HTML file using JSX. Browsers cannot read
         JSX, thus the need for React to translation into HTML files. When using
         React, several libraries need to be installed. Once installed, they need
-        to be imported. Some examples include:
+        to be imported. Some examples of installs and imports include:
         <br/>
         <br/>
         <CopyBlock
@@ -84,8 +84,8 @@ const {score, setScore}= useContext(primaryContext)
         spread operators. Because React uses JSX here are some things to note:
         the component is split between JavaScript (above the return statement)
         and JSX anything in the return statement. If using JavaScript in the
-        lower half you will need to use curly brackets. when using class, JSX
-        requires className instead the way to comment out code looks like this:
+        lower half you will need to use curly brackets. When using a "class" selector, JSX
+        requires "className" instead. This is what React Components look like this:
         <CopyBlock
           language={"jsx"}
           text={code3}
@@ -97,9 +97,11 @@ const {score, setScore}= useContext(primaryContext)
       </p>
       In React there are mulitple CSS files. Index.css is the main file that
       will effect the whole project, ie border box. App.css will only design
-      what's in the App.jsx folder. Example could be a grid layout. Other
+      what's in the App.jsx folder: example could be a grid layout. Other
       index.css files are tied to the Componenets and usually only influence those
       components. In some cases, if a className is not declared in that component, the style will continue through out the project.
+      
+     
 
       <button onClick={changeHandle}>Click Here for a Point!</button>
     </div>

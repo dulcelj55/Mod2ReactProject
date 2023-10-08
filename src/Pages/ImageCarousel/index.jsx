@@ -1,5 +1,5 @@
 import "./index.css";
-
+import {Link} from "react-router-dom"
 import { CopyBlock, dracula } from "react-code-blocks";
 import { primaryContext } from '../../Context/primaryContext'
 import {  useContext, useState } from "react";
@@ -78,9 +78,15 @@ const ImageCarousel = () => {
   };
 
   return (
+    <div className="bgcolor">
+   
+      <div className="topButtons">
+      <Link to="/ComponentsP"><button>BACK TO COMPONENTS</button></Link>
+      <button onClick={changeHandle}>Click Here for a Point!</button>
+      </div>
     <div className="scroll">
-      <h1 className="title">title</h1>
-      <h4>Event Listeners </h4>
+      <h1 className="title">Image Carousel</h1>
+   
 
       <div className="container">
         <div className="lesson">
@@ -105,7 +111,7 @@ const ImageCarousel = () => {
         />
         </div>
       </div>
-      <button onClick={changeHandle}>Click Here for a Point!</button>
+     </div>
     </div>
   );
 };

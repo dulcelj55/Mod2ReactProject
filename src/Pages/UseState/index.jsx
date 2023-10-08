@@ -43,7 +43,7 @@ const UseState = () => {
    
   
  
-  <p className="hooks"> This is what useState looks like. We start by making useState a constant variable.  We will never change it directly; setting/updating state in our function changes the state of the variable. Set in an array, there is always the variable and the way to change it. Inside the parathesis is the actual starting value of state. It can be a number, an string set in quotes,a boolean, an array, or an object set in curly braces.  </p>
+  <p className="hooks"> This is what useState looks like below. We start by making useState a constant variable.  We will never change it directly; setting/updating state in our function changes the state of the variable. Set in an array, there is always the variable and the way to change it. Inside the parathesis is the actual starting value of state. It can be a number, an string set in quotes, a boolean, an array, or an object set in curly braces.  </p>
        <CopyBlock
           language={"jsx"}
           text={code1}

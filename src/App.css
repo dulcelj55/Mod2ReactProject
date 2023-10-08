@@ -13,9 +13,10 @@
   grid-column: span 2;
 }
 #sidebar-container {
-  
+
   width: 150px;
   height: 80vh;
+  
 }
 
 #footer-container {

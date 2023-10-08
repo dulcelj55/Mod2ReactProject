@@ -44,15 +44,16 @@ import Rendering from './Pages/Rendering'
 import { useContext } from 'react'
 import ContextP from './Pages/ContextP'
 
+
 function App() {
-  
+  const [userNewName, setUserNewName] = useState("");
  
 
   return (
    
     <div className='app'>
     <Header id="header-container"/>
-      <Navbar id="nav-container" />
+      <Navbar id="nav-container" userNewName={userNewName}/>
       <SideBar id="sidebar-container"/>
       <Routes >
         <Route path="/" element={<Home/>}/>
@@ -89,6 +90,7 @@ function App() {
         <Route path="/imagecarousel" element={<ImageCarousel/>}/>
         <Route path="/arrays" element={<Arrays/>}/>
         <Route path="/contextp" element={<ContextP/>}/>
+       
         <Route path="/trafficlight" element={<TrafficLight/>}/>
         <Route path="/test" element={ 
           <CodeDisplay 

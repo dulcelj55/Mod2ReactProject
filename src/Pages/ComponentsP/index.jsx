@@ -20,7 +20,7 @@ const ComponentsP = () => {
       <div className="text">
         Components are simlair to JavaScript functions. They are reusable pieces
         of code that will return a HTML element form to the application. Component folders are
-        nested in the Source folder (src). They are written in Pascal form and are
+        nested in the Source (src) folder . They are written in Pascal form and are
         self closing. Writen as fucntions, they have several parts to
         them. Import section is on the top of the function, where you import libraries you're using as well as hooks. The area between the
         start of the function and the return section are where you would place
@@ -31,9 +31,9 @@ const ComponentsP = () => {
         on the DOM. In this area only JSX will work unless JavaScript is place
         in {} curly brackets. Components can use props, hooks, and links. Each
         component can have it's own CSS file, just remember to import it!
-        Components can be stand alone functions but can also serve as PagesLINK
-        when property linked. One shortcut when creating a component is using
-        "rface" it stands for React Function
+        Components can be stand alone functions but can also serve as <Link to="/pagesp">pages</Link> 
+      when property linked. One shortcut when creating a component is using
+        "rface" it stands for react component utilizing an arrow function.
       </div>
       <div className="title" id="buttongrid">Click on these buttons to see different types of Components:
       <br/>
@@ -69,28 +69,10 @@ const ComponentsP = () => {
       <Link to="/imagecarousel">
         <button>Image Carousel</button>
       </Link>
-      <Link to="/quizcard">
-        <button>Multiple Choice </button>
-      </Link>
-      <Link to="/arrays">
-        <button>Arrays</button>
-      </Link>
-      <Link to="/localstorge">
-        <button>Local Storage</button>
-      </Link>
-      <Link to="/propsc">
-        <button>Props </button>
-      </Link>
-      <Link to="/api">
-        <button>APIs</button>
-      </Link>
-      <Link to="/trafficlight">
+     <Link to="/trafficlight">
         <button>Traffic Light</button>
       </Link>
-      <Link to="/Emjois">
-        <button>Emjois</button>
-      </Link>
-      </div>
+    </div>
       </div>
       <button onClick={changeHandle}>Click Here for a Point!</button>
     </div>

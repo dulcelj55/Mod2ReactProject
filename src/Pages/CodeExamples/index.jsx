@@ -265,13 +265,13 @@ const CodeExamples = () => {
       </div>
       <div className="container">
         <div className="lesson">
-          <p className="title">Output:</p>
+          <p >Output:</p>
           <div id="app-container"></div>
         </div>
 
         <div className="code">
           <></>
-          <p className="title">Code:</p>
+          <p >Code:</p>
           <button onClick={previousCodeItem}>Previous</button>
           <button onClick={nextCodeItem}>Next</button>
 

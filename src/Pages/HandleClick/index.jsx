@@ -70,7 +70,7 @@ const HandleClick = () => {
 
       <div className="container">
         <div className="lesson">
-          <p className="title">Output:</p>
+          <p >Output:</p>
           <div>
             <button
               onClick={() => setBackgroundColor(color)}
@@ -83,7 +83,7 @@ const HandleClick = () => {
         </div>
 
         <div className="code">
-          <p className="title">Code:</p>
+          <p >Code:</p>
           <CopyBlock
           language={"jsx"}
           text={code}

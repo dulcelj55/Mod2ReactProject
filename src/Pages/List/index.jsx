@@ -60,7 +60,7 @@ export default List
           <h4>This is an example of how to make a list using .map</h4>
           <div className="container">
             <div className="lesson">
-              <p className="title">Output:</p>
+              <p >Output:</p>
               <div>
                 <input value={newInput} onChange={(e)=> setNewInput(e.target.value)}></input>
                 
@@ -78,7 +78,7 @@ export default List
             </div>
     
             <div className="code">
-              <p className="title">Code:</p>
+              <p >Code:</p>
               <CopyBlock
           language={"jsx"}
           text={code}

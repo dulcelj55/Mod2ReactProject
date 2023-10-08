@@ -71,7 +71,7 @@ const toggleState = () =>{
 
       <div className="container">
         <div className="lesson">
-          <p className="title">Output:</p>
+          <p >Output:</p>
           <div>
 <p>Press the button to revel a message:</p>
             <button onClick={toggleMessage}>Toggle Message</button>
@@ -89,7 +89,7 @@ const toggleState = () =>{
         </div>
 
         <div className="code">
-          <p className="title">Code:</p>
+          <p >Code:</p>
           <CopyBlock
           language={"jsx"}
           text={code}

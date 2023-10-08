@@ -21,3 +21,6 @@ button {
   .title{
     text-align: center;
   }
+  .renimage{
+    image: 100px;
+  }

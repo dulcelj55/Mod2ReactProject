@@ -62,7 +62,7 @@ const Counter = () => {
 
       <div className="container">
         <div className="lesson">
-          <p className="title">Output:</p>
+          <p >Output:</p>
           <div>
           <h3>Current Count: {count}</h3>
           
@@ -73,7 +73,7 @@ const Counter = () => {
         </div>
 
         <div className="code">
-          <p className="title">Code:</p>
+          <p >Code:</p>
           <CopyBlock
           language={"jsx"}
           text={code}

@@ -47,6 +47,7 @@ const Login = () => {
         <div className="banner">
           <p className="center">Welcome {user}!</p>
           <p className="center"> I hope you learn something new today!</p>
+          <p className="center"> Check out how to play the game and don't forget to click below.</p>
         </div>
       );
     }

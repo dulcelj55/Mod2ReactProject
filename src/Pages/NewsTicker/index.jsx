@@ -76,14 +76,14 @@ const NewsTicker = () => {
 
         <div className="container">
           <div className="lesson">
-            <p className="title">Output:</p>
+            <p >Output:</p>
             <div> News:</div>
             <div> {news[currentNewsIndex]}</div>
             <button onClick={nextNewsItem}>Next</button>
           </div>
 
           <div className="code">
-            <p className="title">Code:</p>
+            <p>Code:</p>
             <CopyBlock
               language={"jsx"}
               text={code}

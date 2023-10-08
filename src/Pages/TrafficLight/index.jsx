@@ -40,7 +40,7 @@ const TrafficLight = () => {
 
       <div className="container">
         <div className="lesson">
-          <p className="title">Output:</p>
+          <p >Output:</p>
           <div className = 'traffic'>
   <div onClick={()=> setColor("red")}
   className={`circle  ${color=== "red" ? "red": ""}`}></div>
@@ -52,7 +52,7 @@ const TrafficLight = () => {
         </div>
 
         <div className="code">
-          <p className="title">Code:</p>
+          <p >Code:</p>
           <CopyBlock
           language={"jsx"}
           text={code}

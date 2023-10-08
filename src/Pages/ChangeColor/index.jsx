@@ -74,7 +74,7 @@ export default ChangeColor
 
       <div className="container">
         <div className="lesson">
-          <p className="title">Output:</p>
+          <p >Output:</p>
           <p>Click a color button.</p>
 
           <div>
@@ -96,7 +96,7 @@ export default ChangeColor
         </div>
 
         <div className="code">
-          <p className="title">Code:</p>
+          <p >Code:</p>
           <CopyBlock
             language={"jsx"}
             text={code}

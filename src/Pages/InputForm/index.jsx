@@ -139,7 +139,7 @@ return (
 
       <div className="container">
         <div className="lesson">
-          <p className="title">Output:</p>
+          <p >Output:</p>
           <>
     
     {returnInputsOrTexts()}
@@ -147,7 +147,7 @@ return (
         </div>
 
         <div className="code">
-          <p className="title">Code:</p>
+          <p >Code:</p>
           <CopyBlock
           language={"jsx"}
           text={code}

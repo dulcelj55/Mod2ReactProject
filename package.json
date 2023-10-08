@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mui/icons-material": "file:mui/material@emotion/styled@emotion/react",
+    "@mui/icons-material": "file:mui/material@emotions/styled@emotion/react",
     "react": "^18.2.0",
     "react-code-blocks": "^0.1.4",
     "react-dom": "^18.2.0",

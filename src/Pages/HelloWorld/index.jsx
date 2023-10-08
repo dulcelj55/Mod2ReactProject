@@ -33,7 +33,7 @@ const HelloWorld = () => {
           <button onClick={changeHandle}>Click Here for a Point!</button>
         </div>
         <h1 className="title">Hello World!</h1>
-        <h4>
+        <h4 className="info">
           This is an example of adding text inside the return statement. This is
           exactly like typing into HTML. You can use element tags like h1, p, or
           div tags.
@@ -41,13 +41,13 @@ const HelloWorld = () => {
         <br />
         <div className="container">
           <div className="lesson">
-            <p className="title">Output:</p>
+            <p >Output:</p>
           
             <h1>Hello World!</h1>
           </div>
 
           <div className="code">
-            <p className="title">Code:</p>
+            <p >Code:</p>
             <CopyBlock
               language={"jsx"}
               text={code}

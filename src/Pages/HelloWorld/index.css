@@ -2,13 +2,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100%;
-    background-color: blue;
+    background-color: lightblue;
     
     
 }
 .lesson{
-    background-color: bisque;
+    background-color: lightsalmon;
     padding: 20px;
+    text-align: center;
    
 
 }
@@ -18,11 +19,16 @@
 }
 .title{
     text-align: center;
+    background-color: lightblue;
 }
+.info{
+    background-color: lightblue;
+}    
+
 .code{
     padding:10px;
- 
-    background-color: aquamarine;
+    text-align: center;
+    background-color: yellowgreen;
 }
 .topButtons{
     display: flex;
@@ -30,6 +36,7 @@
 
 
 }
-.bgcolor{
-    background-color: pink;
-}
+
+body {
+    background-color: lightblue;
+  }

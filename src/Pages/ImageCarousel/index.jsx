@@ -52,12 +52,8 @@ const ImageCarousel = () => {
   
   export default ImageCarousel`;
   
-  const [images, setImages] = useState([
-   "1",
-   "2",
-  "3",
-   "4",
-  "5"
+  const [images, setImages] = useState(["src/assets/homeImage.jpeg","src/assets/lifecycle.png", "src/assets/Spike.jpeg"
+   
   ]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const nextHandle = (e) => {
@@ -90,7 +86,7 @@ const ImageCarousel = () => {
 
       <div className="container">
         <div className="lesson">
-          <p className="title">Output:</p>
+          <p >Output:</p>
           <>
             <div>ImageCarousel</div>
             <img src={images[currentIndex]} />
@@ -100,7 +96,7 @@ const ImageCarousel = () => {
         </div>
 
         <div className="code">
-          <p className="title">Code:</p>
+          <p>Code:</p>
           <CopyBlock
           language={"jsx"}
           text={code}

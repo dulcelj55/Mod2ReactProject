@@ -9,10 +9,11 @@ const Navbar = ({ userNewName}) => {
 <>
     <nav id="navbar-container">
    
-    <Link to="/Game">Game</Link>
-    <Link to="/CodeExamples">React Sample</Link>
+   
+   
     { isSubmitted? `Logged in as ${user}` : <Link to="/Login">Login</Link>}
-
+    <Link to="/CodeExamples">React Sample</Link>
+    <Link to="/Game">Game</Link>
     
     
     </nav>

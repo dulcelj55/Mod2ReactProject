@@ -39,6 +39,7 @@ A tutorial appilacation for React that had interactive pieces: login, game, and 
 * Have Internet acces
 * Enter[Click here](https://dulcelj55.github.io/Mod2ReactProject/  )in command bar to see tutorial
 * For gitHub access clone the following address:[click here] (https://github.com/dulcelj55/HorseRaceProject1.git)
+* For render.com link [Click here](https://dashboard.render.com/static/srv-ckhgsji12vs73e5qgr0)
 * Enjoy
 * Share with Friends
 

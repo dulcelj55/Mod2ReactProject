@@ -1,6 +1,6 @@
 import "./index.css"
 import { CopyBlock, dracula } from "react-code-blocks";
-
+import StarRateIcon from "@mui/icons-material"
 
 
 import { primaryContext } from '../../Context/primaryContext'
@@ -107,7 +107,7 @@ const RateReview = () => {
       <h1 className="title">title</h1>
       <h4>Star Ratings</h4>
 
-      <div className="container">
+      {/* <div className="container">
         <div className="lesson">
           <p className="title">Output:</p>
           <>
@@ -138,6 +138,7 @@ const RateReview = () => {
         </div>
       </div>
       <button onClick={changeHandle}>Click Here for a Point!</button>
+     */}
     </div>
   );
 };

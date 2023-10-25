@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@mui/icons-material": "file:mui/material@emotions/styled@emotion/react",
+    "mui": "^0.0.1",
     "react": "^18.2.0",
     "react-code-blocks": "^0.1.4",
     "react-dom": "^18.2.0",
